@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess Bot</title>
+    <style>
+        .game-container {
+            display: flex;
+            align-items: flex-start;
+        }
+        canvas {
+            border: 1px solid black;
+        }
+        #moveHistory {
+            margin-left: 20px;
+            border-collapse: collapse;
+        }
+        #moveHistory th, #moveHistory td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        #moveHistory th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <div class="game-container">
+        <div>
+            <canvas id="chessBoard" width="400" height="400"></canvas>
+            <br>
+            <label>
+                <input type="checkbox" id="moveAnalysis" onchange="toggleMoveAnalysis()"> Enable Move Analysis
+            </label>
+            <label>
+                <input type="checkbox" id="autoMove" onchange="toggleAutoMove()"> Enable Auto Move
+            </label>
+            <label>
+                <input type="checkbox" id="freeMode" onchange="toggleFreeMode()"> Free Mode
+            </label>
+            <button id="bestMoveButton" onclick="makeBestMove()">Make Best Move</button>
+            <button id="undoButton" onclick="undoMove()">Undo</button>
+            <button id="redoButton" onclick="redoMove()">Redo</button>
+        </div>
+        <table id="moveHistory">
+            <thead>
+                <tr>
+                    <th>Move</th>
+                    <th>White</th>
+                    <th>Black</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+    <script src="bot.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
