@@ -50,13 +50,6 @@ This project is an interactive chess game with an AI opponent, implemented in Ja
 
 The AI uses the minimax algorithm with alpha-beta pruning to determine the best move. The evaluation function considers piece values and positional advantages. 🤖♟️
 
-## Future Improvements 🔮
-
-- Implement castling and en passant moves ♖♔
-- Add difficulty levels for the AI 🏋️‍♂️
-- Implement an opening book for varied game starts 📚
-- Add network play functionality 🌐
-
 ## License 📜
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE.md) file for details.
